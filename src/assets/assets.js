@@ -7,17 +7,13 @@ import sign_icon from "./sign_board.png";
 import p1 from "./p1.png";
 import p2 from "./p2.png";
 import p3 from "./p3.png";
+import project_video from './project_video.mov'
 
 export const assets = {
   main_bg,
   project_bg,
   cart_icon,
-  block_icon,
-  crain_icon,
-  sign_icon,
-  p1,
-  p2,
-  p3,
+  project_video,
 };
 
 export const our_services = [
