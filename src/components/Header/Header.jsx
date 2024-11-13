@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { assets } from "../../assets/assets";
 import { Links } from "./Links";
 import { FaBars, FaMoon, FaSun, FaTimes, FaUser } from "react-icons/fa";
-import { useApp } from "../../context/appContext";
+import { useApp } from "../../context/AppContext";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
