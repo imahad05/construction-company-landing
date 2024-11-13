@@ -8,12 +8,14 @@ import p1 from "./p1.png";
 import p2 from "./p2.png";
 import p3 from "./p3.png";
 import project_video from './project_video.mov'
+import brands from './brands.png'
 
 export const assets = {
   main_bg,
   project_bg,
   cart_icon,
   project_video,
+  brands
 };
 
 export const our_services = [
