@@ -1,5 +1,5 @@
 import React from "react";
-import { our_services } from "../../assets/assets";
+import { our_services } from "../assets/assets";
 
 const Main = () => {
   return (
