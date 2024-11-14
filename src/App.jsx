@@ -7,6 +7,8 @@ import Footer from "./components/Footer";
 import Auth from "./pages/Auth";
 import Projects from "./pages/Projects";
 import News from "./pages/News";
+import Portfolio from "./pages/Portfolio";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
@@ -16,8 +18,10 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/project" element={<Projects />} />
         <Route path="/blog" element={<News />} />
-        <Route path="/*" element={<CommingSoon />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Auth />} />
+        <Route path="/*" element={<CommingSoon />} />
       </Routes>
       <Footer />
     </div>

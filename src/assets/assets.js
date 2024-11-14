@@ -12,12 +12,22 @@ import brands from "./brands.png";
 import about_img from "./about_img.png";
 import project_banner from "./project_banner.png";
 import gallery from "./gallery.png";
+import portfolio_bg from './portfolio_bg.jpeg'
 import n1 from "./n1.png";
 import n2 from "./n2.png";
 import n3 from "./n3.png";
 import n4 from "./n4.png";
 import n5 from "./n5.png";
 import n6 from "./n6.png";
+import pf1 from "./pf1.png";
+import pf2 from "./pf2.png";
+import pf3 from "./pf3.png";
+import pf4 from "./pf4.png";
+import pf5 from "./pf5.png";
+import pf6 from "./pf6.png";
+import pf7 from "./pf7.png";
+import pf8 from "./pf8.png";
+import pf9 from "./pf9.png";
 
 export const assets = {
   main_bg,
@@ -28,6 +38,7 @@ export const assets = {
   about_img,
   project_banner,
   gallery,
+  portfolio_bg
 };
 
 export const our_services = [
@@ -135,5 +146,62 @@ export const news = [
     heading: "Maecenas Fringilla Augue",
     subHeading: "May 9, 2014 | Category",
     para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam justo et nibh venenatis aliquet.Donec quis felis imperdiet, vestibulum est ut, pulvinar dolor.  ",
+  },
+];
+
+export const portfolio = [
+  {
+    id: 1,
+    img: pf1,
+    heading: "Service Title",
+    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id et euismod bibendum adipiscing et orci, fermentum. ",
+  },
+  {
+    id: 2,
+    img: pf2,
+    heading: "Service Title",
+    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id et euismod bibendum adipiscing et orci, fermentum. ",
+  },
+  {
+    id: 3,
+    img: pf3,
+    heading: "Service Title",
+    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id et euismod bibendum adipiscing et orci, fermentum. ",
+  },
+  {
+    id: 4,
+    img: pf4,
+    heading: "Service Title",
+    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id et euismod bibendum adipiscing et orci, fermentum. ",
+  },
+  {
+    id: 5,
+    img: pf5,
+    heading: "Service Title",
+    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id et euismod bibendum adipiscing et orci, fermentum. ",
+  },
+  {
+    id: 6,
+    img: pf6,
+    heading: "Service Title",
+    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id et euismod bibendum adipiscing et orci, fermentum. ",
+  },
+  {
+    id: 7,
+    img: pf7,
+    heading: "Service Title",
+    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id et euismod bibendum adipiscing et orci, fermentum. ",
+  },
+  {
+    id: 8,
+    img: pf8,
+    heading: "Service Title",
+    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id et euismod bibendum adipiscing et orci, fermentum. ",
+  },
+  {
+    id: 9,
+    img: pf9,
+    heading: "Service Title",
+    para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id et euismod bibendum adipiscing et orci, fermentum. ",
   },
 ];
