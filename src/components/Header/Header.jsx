@@ -24,19 +24,21 @@ const Header = () => {
 
       <div className="flex items-center space-x-6">
         {/* Desktop Menu */}
-        <ul className="hidden xl:flex items-center space-x-4">
-          {Links.map((link) => (
-            <NavLink
-              to={link.route}
-              key={link.id}
-              className="text-lg flex flex-col items-center text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition"
-              aria-label={link.link}
-            >
-              {link.link}
-              <hr className="bg-primary h-[3px] rounded-full w-0 transition-all duration-300 hover:w-full" />
-            </NavLink>
-          ))}
-        </ul>
+        {isAuthenticated && (
+          <ul className="hidden xl:flex items-center space-x-4">
+            {Links.map((link) => (
+              <NavLink
+                to={link.route}
+                key={link.id}
+                className="text-lg flex flex-col items-center text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition"
+                aria-label={link.link}
+              >
+                {link.link}
+                <hr className="bg-primary h-[3px] rounded-full w-0 transition-all duration-300 hover:w-full" />
+              </NavLink>
+            ))}
+          </ul>
+        )}
 
         <div className="flex items-center space-x-2 md:space-x-4">
           {/* <img
@@ -44,9 +46,7 @@ const Header = () => {
             alt="Cart"
             className="w-5 cursor-pointer hover:scale-105 transition-transform"
           /> */}
-          <Link to={"/login"}>
-            <FaUser className="text-xl md:text-2xl text-gray-800 dark:text-gray-100 cursor-pointer" />
-          </Link>
+
           {themeMode === "light" ? (
             <FaMoon
               className="text-xl md:text-2xl text-gray-800 dark:text-gray-100 cursor-pointer"
@@ -58,18 +58,22 @@ const Header = () => {
               onClick={() => setThemeMode("light")}
             />
           )}
-          {isMenuOpen ? (
-            <button
-              className="text-xl md:text-2xl text-gray-800 dark:text-gray-100 cursor-pointer hover:scale-105 transition-transform"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <FaTimes />
-            </button>
-          ) : (
-            <FaBars
-              className="text-xl md:text-2xl text-gray-800 dark:text-gray-100 cursor-pointer xl:hidden"
-              onClick={() => setIsMenuOpen(true)}
-            />
+          {isAuthenticated && (
+            <>
+              {isMenuOpen ? (
+                <button
+                  className="text-xl md:text-2xl text-gray-800 dark:text-gray-100 cursor-pointer hover:scale-105 transition-transform"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <FaTimes />
+                </button>
+              ) : (
+                <FaBars
+                  className="text-xl md:text-2xl text-gray-800 dark:text-gray-100 cursor-pointer xl:hidden"
+                  onClick={() => setIsMenuOpen(true)}
+                />
+              )}
+            </>
           )}
           {isAuthenticated && (
             <button onClick={handleLogOut}>
