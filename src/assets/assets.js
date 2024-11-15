@@ -55,8 +55,47 @@ export const our_services = [
     para: "Lorem ipsum dolor sit consectetur adipiscing elit.",
   },
   {
-    id: 1,
+    id: 3,
     img: sign_icon,
+    heading: "Site Management",
+    para: "Lorem ipsum dolor sit consectetur adipiscing elit.",
+  },
+];
+
+export const what_we_do = [
+  {
+    id: 1,
+    img: crain_icon,
+    heading: "Building Construction",
+    para: "Lorem ipsum dolor sit consectetur adipiscing elit.",
+  },
+  {
+    id: 2,
+    img: block_icon,
+    heading: "Foundation Work",
+    para: "Lorem ipsum dolor sit consectetur adipiscing elit.",
+  },
+  {
+    id: 3,
+    img: sign_icon,
+    heading: "Site Management",
+    para: "Lorem ipsum dolor sit consectetur adipiscing elit.",
+  },
+];
+
+export const contact_info = [
+  {
+    id: 1,
+    heading: "Building Construction",
+    para: "Lorem ipsum dolor sit consectetur adipiscing elit.",
+  },
+  {
+    id: 2,
+    heading: "Foundation Work",
+    para: "Lorem ipsum dolor sit consectetur adipiscing elit.",
+  },
+  {
+    id: 3,
     heading: "Site Management",
     para: "Lorem ipsum dolor sit consectetur adipiscing elit.",
   },

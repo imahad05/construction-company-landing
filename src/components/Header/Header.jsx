@@ -10,14 +10,14 @@ const Header = () => {
   const { themeMode, setThemeMode } = useApp();
 
   return (
-    <nav className="fixed top-0 right-0 left-0 flex justify-between items-center px-6 md:px-[7vw] h-16 bg-gray-100 dark:bg-gray-800 z-50 shadow-xl">
-      <h1 className="text-sm md:text-xl font-semibold text-gray-800 dark:text-gray-100">
+    <nav className="fixed top-0 right-0 left-0 flex justify-between items-center px-6 md:px-[7vw] h-16 bg-gray-100 dark:bg-gray-800 z-50 shadow-xl overflow-x-hidden">
+      <h1 className="text-sm md:text-lg xl:text-xl font-semibold text-gray-800 dark:text-gray-100">
         Construction Company Landing
       </h1>
 
       <div className="flex items-center space-x-6">
         {/* Desktop Menu */}
-        <ul className="hidden xl:flex items-center space-x-6">
+        <ul className="hidden xl:flex items-center space-x-4">
           {Links.map((link) => (
             <NavLink
               to={link.route}
@@ -51,10 +51,19 @@ const Header = () => {
               onClick={() => setThemeMode("light")}
             />
           )}
-          <FaBars
-            className="text-2xl text-gray-800 dark:text-gray-100 cursor-pointer xl:hidden"
-            onClick={() => setIsMenuOpen(true)}
-          />
+          {isMenuOpen ? (
+            <button
+              className="text-2xl text-gray-800 dark:text-gray-100 cursor-pointer hover:scale-105 transition-transform"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <FaTimes />
+            </button>
+          ) : (
+            <FaBars
+              className="text-2xl text-gray-800 dark:text-gray-100 cursor-pointer xl:hidden"
+              onClick={() => setIsMenuOpen(true)}
+            />
+          )}
         </div>
       </div>
 
@@ -65,13 +74,7 @@ const Header = () => {
 };
 
 const MobileMenu = ({ setIsMenuOpen }) => (
-  <div className="fixed inset-0 z-50 bg-white dark:bg-gray-800 p-10 w-full h-screen transform duration-300">
-    <button
-      className="absolute top-5 left-5 text-2xl text-gray-800 dark:text-gray-100 cursor-pointer hover:scale-105 transition-transform"
-      onClick={() => setIsMenuOpen(false)}
-    >
-      <FaTimes />
-    </button>
+  <div className="fixed top-16 shadow-md inset-0 z-50 bg-gray-200 dark:bg-gray-800 p-10 w-full md:w-1/2 h-screen transform duration-300">
     <ul className="flex flex-col items-center space-y-6 mt-10">
       {Links.map((link) => (
         <NavLink

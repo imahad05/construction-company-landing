@@ -10,7 +10,7 @@ import Brands from "../components/Brands";
 
 const Home = () => {
   return (
-    <div className="dark:bg-gray-800 dark:text-white bg-white text-black mt-16">
+    <div className="dark:bg-gray-800 dark:text-white bg-white text-black mt-16 overflow-x-hidden">
       <Main />
       <MiniBanner
         heading={"Get a Quote For Your Project"}

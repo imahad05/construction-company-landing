@@ -1,10 +1,10 @@
 import React from "react";
-import { our_services } from "../assets/assets";
+import { contact_info } from "../assets/assets";
 
 const ContactMain = () => {
   return (
     <main
-      className="flex flex-col md:flex-row items-center justify-between h-full bg-cover bg-center relative"
+      className="flex flex-col md:flex-row items-center justify-between h-full bg-cover bg-center relative overflow-x-hidden"
       style={{ backgroundImage: "url('/main_bg.jpeg')" }}
     >
       <div className="bg-black bg-opacity-60 h-full w-full absolute"></div>
@@ -30,19 +30,15 @@ const ContactMain = () => {
           Contact Info
         </h4>
         <div className="flex items-center justify-center md:block">
-          {our_services.map((service) => (
+          {contact_info.map((service) => (
             <div
+              className="2xl:w-[50%] text-start md:text-start mt-4"
               key={service.id}
-              className="flex flex-col items-center md:flex-row  gap-3 md:gap-6 py-4"
             >
-              <div className="text-center md:text-start">
-                <h5 className="text-sm md:text-xl font-semibold text-black mb-4">
-                  {service.heading}
-                </h5>
-                <p className="text-white text-xs md:text-base">
-                  {service.para}
-                </p>
-              </div>
+              <h3 className="text-sm md:text-lg xl:text-xl font-semibold text-black mb-2">
+                {service.heading}
+              </h3>
+              <p className="text-white text-xs lg:text-base">{service.para}</p>
             </div>
           ))}
         </div>

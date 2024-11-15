@@ -4,7 +4,7 @@ import MiniBanner from "../components/MiniBanner";
 
 const Contact = () => {
   return (
-    <div className="dark:bg-gray-800 dark:text-white bg-white text-black mt-16 ">
+    <div className="dark:bg-gray-800 dark:text-white bg-white text-black mt-16 overflow-hidden">
       <ContactMain />
       <MiniBanner
         heading={"Call: (541) 931-3526"}
