@@ -1,5 +1,8 @@
 import React from "react";
 import { contact_info } from "../assets/assets";
+import { FaFacebook } from "react-icons/fa";
+import { BsTwitter } from "react-icons/bs";
+import { LiaLinkedin } from "react-icons/lia";
 
 const ContactMain = () => {
   return (
@@ -25,22 +28,35 @@ const ContactMain = () => {
       </div>
 
       {/* Right Section with Services */}
-      <div className="w-full md:w-[40%] xl:w-[30%] md:h-full bg-primary flex flex-col items-start justify-start md:gap-6 p-4 md:p-10 overflow-hidden z-10 slide-in">
+      <div className="w-full md:w-[40%] h-full bg-primary flex flex-col items-start justify-start md:gap-6 p-4 md:p-10 overflow-hidden z-10 slide-in">
         <h4 className="text-xl md:text-3xl 2xl:text-4xl text-black font-bold">
           Contact Info
         </h4>
-        <div className="flex items-center justify-center md:block">
+        <div className=" grid gap-1 grid-cols-3  items-center justify-center md:block">
           {contact_info.map((service) => (
-            <div
-              className="2xl:w-[50%] text-start md:text-start mt-4"
-              key={service.id}
-            >
+            <div className="text-start md:text-start mt-4" key={service.id}>
               <h3 className="text-sm md:text-lg xl:text-xl font-semibold text-black mb-2">
                 {service.heading}
               </h3>
-              <p className="text-white text-xs lg:text-base">{service.para}</p>
+              <p className="text-white text-xs md:text-sm lg:text-base">
+                {service.paraOne}
+              </p>
+              <p className="text-white text-xs md:text-sm lg:text-base">
+                {service.paraTwo}
+              </p>
             </div>
           ))}
+        </div>
+        <div className="flex items-center justify-center lg:justify-start gap-6 my-4 md:my-2 w-full">
+          <span className="text-lg text-black md:text-xl 2xl:text-3xl cursor-pointer">
+            <FaFacebook />
+          </span>
+          <span className="text-lg text-black md:text-xl 2xl:text-3xl cursor-pointer">
+            <BsTwitter />
+          </span>
+          <span className="text-lg text-black md:text-xl 2xl:text-3xl cursor-pointer">
+            <LiaLinkedin />
+          </span>
         </div>
       </div>
     </main>

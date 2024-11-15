@@ -42,7 +42,7 @@ const AboutMain = () => {
                 <h3 className="text-sm md:text-lg xl:text-xl font-semibold text-white mb-2">
                   {service.heading}
                 </h3>
-                <p className="text-white text-xs lg:text-base">
+                <p className="text-white text-xs md:text-sm xl:text-base lg:w-[90%]">
                   {service.para}
                 </p>
               </div>

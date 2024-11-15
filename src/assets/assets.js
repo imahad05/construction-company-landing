@@ -12,7 +12,7 @@ import brands from "./brands.png";
 import about_img from "./about_img.png";
 import project_banner from "./project_banner.png";
 import gallery from "./gallery.png";
-import portfolio_bg from './portfolio_bg.jpeg'
+import portfolio_bg from "./portfolio_bg.jpeg";
 import n1 from "./n1.png";
 import n2 from "./n2.png";
 import n3 from "./n3.png";
@@ -28,6 +28,9 @@ import pf6 from "./pf6.png";
 import pf7 from "./pf7.png";
 import pf8 from "./pf8.png";
 import pf9 from "./pf9.png";
+import ab1 from "./ab1.png";
+import ab2 from "./ab2.png";
+import ab3 from "./ab3.png";
 
 export const assets = {
   main_bg,
@@ -38,7 +41,7 @@ export const assets = {
   about_img,
   project_banner,
   gallery,
-  portfolio_bg
+  portfolio_bg,
 };
 
 export const our_services = [
@@ -65,39 +68,42 @@ export const our_services = [
 export const what_we_do = [
   {
     id: 1,
-    img: crain_icon,
+    img: ab1,
     heading: "Building Construction",
-    para: "Lorem ipsum dolor sit consectetur adipiscing elit.",
+    para: "Lorem ipsum dolor sit consectetur adipiscing elit. Nullam lectus erat",
   },
   {
     id: 2,
-    img: block_icon,
-    heading: "Foundation Work",
-    para: "Lorem ipsum dolor sit consectetur adipiscing elit.",
+    img: ab2,
+    heading: "Building Repairs",
+    para: "Lorem ipsum dolor sit consectetur adipiscing elit. Nullam lectus erat",
   },
   {
     id: 3,
-    img: sign_icon,
-    heading: "Site Management",
-    para: "Lorem ipsum dolor sit consectetur adipiscing elit.",
+    img: ab3,
+    heading: "Custom Design",
+    para: "Lorem ipsum dolor sit consectetur adipiscing elit. Nullam lectus erat",
   },
 ];
 
 export const contact_info = [
   {
     id: 1,
-    heading: "Building Construction",
-    para: "Lorem ipsum dolor sit consectetur adipiscing elit.",
+    heading: "Our Office",
+    paraOne: "1234 Divi St. #1000, San Francisc, CA 93251",
+    paraTwo: "",
   },
   {
     id: 2,
-    heading: "Foundation Work",
-    para: "Lorem ipsum dolor sit consectetur adipiscing elit.",
+    heading: "Open Office Hours",
+    paraOne: "M-F: 9am – 6pm ",
+    paraTwo: "S-S: 10am – 4pm",
   },
   {
     id: 3,
     heading: "Site Management",
-    para: "Lorem ipsum dolor sit consectetur adipiscing elit.",
+    paraOne: "constructioninc.com",
+    paraTwo: "(346) 426-2351",
   },
 ];
 
