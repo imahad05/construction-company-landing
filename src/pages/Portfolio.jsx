@@ -4,7 +4,7 @@ import { assets, portfolio } from "../assets/assets";
 const Portfolio = () => {
   return (
     <div className=" bg-white dark:bg-gray-800 text-black dark:text-white mt-16">
-      <div
+      <main
         className="w-full bg-no-repeat"
         style={{
           background: `url(${assets.portfolio_bg})`,
@@ -22,7 +22,7 @@ const Portfolio = () => {
             egestas pellentesque libero dolor in diam consequat ut.{" "}
           </p>
         </div>
-      </div>
+      </main>
 
       <div className="py-20 px-[7vw]">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 2xl:gap-10 w-full md:w-[80%] mx-auto gap-y-10">

@@ -1,6 +1,6 @@
 import React from "react";
 import Main from "../components/Main";
-import GetQuote from "../components/GetQuote";
+import MiniBanner from "../components/MiniBanner";
 import LatestProjects from "../components/LatestProjects";
 import ProjectOverview from "../components/ProjectOverview";
 import History from "../components/History";
@@ -12,13 +12,16 @@ const Home = () => {
   return (
     <div className="dark:bg-gray-800 dark:text-white bg-white text-black mt-16">
       <Main />
-      <GetQuote />
+      <MiniBanner
+        heading={"Get a Quote For Your Project"}
+        buttonText={"FREE QUOTE"}
+      />
       <ProjectOverview />
       <LatestProjects />
       <History />
       <ContactSection />
       <TestimonialsSection />
-      <Brands/>
+      <Brands />
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import { assets } from "../assets/assets";
+import PrimaryUnderLine from "./PrimaryUnderLine";
 
 const History = () => {
   return (
@@ -10,7 +11,7 @@ const History = () => {
           We’ve Been Building For Over 10 Years
         </h5>
         {/* Yellow Underline */}
-        <div className="w-12 h-1 bg-primary mb-8 md:mb-16"></div>
+        <PrimaryUnderLine />
 
         <p className="text-white mb-10 text-sm md:text-base">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien,
@@ -19,29 +20,29 @@ const History = () => {
           amet phasellus.
         </p>
 
-        <button className="border border-primary transition py-3 px-8 cursor-pointer text-primary hover:text-yellow-600 font-medium text-sm md:text-base">
+        <button className="text-primary hover:text-yellow-600 transition text-xs md:text-sm 2xl:text-lg py-2 px-4 border border-primary 2xl:border-2">
           About Us
         </button>
       </div>
 
       {/* Right Side Content */}
-      <div className="flex-1 flex relative">
+      <div className="flex-1 flex flex-col">
         <video
           src={assets.project_video}
           autoPlay
           muted
           loop
-          className="w-full object-cover mb-[190px] md:mb-0"
+          className="h-full object-cover"
         ></video>
 
         {/* Bottom Statistics */}
-        <div className="w-full flex flex-col md:flex-row absolute bottom-0 right-0 left-0">
+        <div className="w-full flex flex-col md:flex-row ">
           <div className="flex-1 bg-primary p-6">
-            <p className="text-xl md:text-4xl font-bold">Call for a Quote</p>
+            <p className="text-xl md:text-2xl xl:text-4xl  font-bold">Call for a Quote</p>
             <p className="text-sm font-semibold uppercase">(346) 234-6973</p>
           </div>
           <div className="flex-1 bg-white flex items-center justify-center dark:bg-gray-700 p-6 text-center text-white">
-            <button className="bg-transparent hover:bg-transparent border border-black hover:bg-primary hover:text-black transition py-3 px-8 cursor-pointer dark:text-gray-300 dark:border-white dark:hover:text-white text-textGrey font-medium text-sm md:text-base">
+            <button className="text-black hover:text-gray-700 dark:text-white dark:hover:text-gray-300 text-xs md:text-sm 2xl:text-lg py-2 px-4 border dark:border-white border-black 2xl:border-2 transition">
               ONLINE ESTIMATE FORM
             </button>
           </div>

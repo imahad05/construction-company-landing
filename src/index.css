@@ -17,6 +17,87 @@ a.active hr {
   width: 80%;
 }
 
+.fade-in {
+  opacity: 0;               /* Shuruwat mein invisible */
+  animation: fadeIn 1s ease-in forwards;  /* Animation chalti hai aur visible ho jata hai */
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.slide-in {
+  transform: translateX(100%);  /* Start mein element screen ke right se bahar hoga */
+  opacity: 0;                   /* Shuruwat mein invisible */
+  animation: slideIn 1s ease forwards;
+}
+
+/* CSS */
+.typing {
+  overflow: hidden;               /* Extra text ko hide karta hai */
+  white-space: nowrap;            /* Text ko single line mein rakhta hai */
+  width: 0;                       /* Shuruwat mein width zero */
+  animation: typing 3s steps(30, end) forwards, blink 0.5s step-end infinite alternate;
+  border-right: 2px solid black;  /* Cursor effect ke liye border */
+
+}
+
+@keyframes typing {
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%;               
+  }
+}
+
+@keyframes blink {
+  from {
+      border-color: transparent;
+  }
+  to {
+      border-color: black;       /* Blinking cursor effect */
+  }
+}
+
+
+@keyframes slideIn {
+  from {
+      transform: translateX(100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+/* CSS */
+.slide-in-left {
+  transform: translateX(-100%);   /* Start mein element left side ke bahar hoga */
+  opacity: 0;                     /* Invisible shuruwat mein */
+  animation: slideInLeft 1s ease forwards;
+}
+
+@keyframes slideInLeft {
+  from {
+      transform: translateX(-100%);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0);
+      opacity: 1;
+  }
+}
+
+
+
+
 @media screen and (max-width: 600px) {
   a.active {
     color: #ffb400;

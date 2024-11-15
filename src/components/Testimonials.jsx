@@ -1,5 +1,6 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
+import PrimaryUnderLine from "./PrimaryUnderLine";
 
 const Testimonial = ({ name, text }) => (
   <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg text-center">
@@ -38,7 +39,7 @@ const TestimonialsSection = () => {
         Client Testimonials
       </h2>
       <div className="flex justify-center mb-8">
-        <div className="w-12 h-1 bg-yellow-500"></div>
+        <PrimaryUnderLine/>
       </div>
 
       {/* Testimonials Grid */}

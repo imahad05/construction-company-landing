@@ -3,7 +3,7 @@ import { our_services } from '../assets/assets'
 
 const ContactMain = () => {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-between h-[80vh] 2xl:h-[70vh]">
+    <main className="flex flex-col md:flex-row items-center justify-between h-[80vh] 2xl:h-[70vh]">
     {/* Left Section with Background Image */}
     <div
       className="flex-1 md:h-full bg-cover bg-center bg-no-repeat"
@@ -45,7 +45,7 @@ const ContactMain = () => {
         ))}
       </div>
     </div>
-  </div>
+  </main>
   )
 }
 

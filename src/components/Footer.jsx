@@ -8,6 +8,7 @@ import {
 } from "react-icons/fa";
 import { FaLocationPin } from "react-icons/fa6";
 import { MdEmail } from "react-icons/md";
+import PrimaryUnderLine from "./PrimaryUnderLine";
 
 const Footer = () => {
   return (
@@ -15,28 +16,29 @@ const Footer = () => {
       <div className="w-full bg-primary p-[5vw]">
         <form>
           <h5 className="text-4xl text-black mb-8 font-bold">Contact Us</h5>
-          <div className="w-12 h-1 bg-black mb-8 md:mb-16"></div>
-          <div className="flex gap-3 md:gap-6 mb-4">
+          <PrimaryUnderLine bgColor="bg-black" />
+
+          <div className="flex flex-col md:flex-row gap-3 md:gap-6 mb-3">
             <input
               type="text"
               placeholder="Name"
-              className="w-full h-[50px] px-4 "
+              className="w-full h-[40px] md:h-[50px] px-4 text-sm md:text-base"
             />
             <input
               type="email"
               placeholder="Email"
-              className="w-full h-[50px] px-4 "
+              className="w-full h-[40px] md:h-[50px] px-4 text-sm md:text-base"
             />
           </div>
           <textarea
             name="message"
             id="message"
             placeholder="Message"
-            className="w-full p-4 h-[100px]"
+            className="w-full p-4 h-[80px] md:h-[100px] text-sm md:text-base"
           ></textarea>
           <div className="text-right mt-4">
-            <button className="border border-white text-white font-semibold px-6 py-3 cursor-pointer hover:text-gray-300 transition">
-              Send Message
+            <button className="text-white hover:text-yellow-600 transition text-xs md:text-sm 2xl:text-lg font-normal py-2 px-4 border border-white 2xl:border-2">
+              SEND MESSAGE
             </button>
           </div>
         </form>

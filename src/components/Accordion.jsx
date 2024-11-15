@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaPlus, FaMinus } from "react-icons/fa";
+import PrimaryUnderLine from "./PrimaryUnderLine";
 
 const AccordionItem = ({ title, content, isOpen, onClick }) => {
   return (
@@ -11,9 +12,9 @@ const AccordionItem = ({ title, content, isOpen, onClick }) => {
         {title}
         <div className="bg-primary p-1 rounded-full">
           {isOpen ? (
-            <FaMinus className="text-white text-sm" />
+            <FaMinus className="text-white text-xs md:text-sm" />
           ) : (
-            <FaPlus className="text-white text-sm" />
+            <FaPlus className="text-white text-xs md:text-sm" />
           )}
         </div>
       </button>
@@ -62,16 +63,16 @@ const ContactSection = () => {
     <div className="py-10 px-[7vw] flex flex-col md:flex-row items-start dark:bg-gray-800 bg-white text-black dark:text-white">
       {/* Left Section */}
       <div className="w-full md:w-2/6 mb-8 md:mb-0">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <h5 className="text-3xl md:text-4xl 2xl:text-5xl font-bold mb-4">
           Let’s Build <br /> Something <br /> Together
-        </h2>
-        <div className="w-12 h-1 bg-yellow-500 mb-8"></div>
-        <p className="text-gray-700 dark:text-gray-300 mb-8 md:w-[70%]">
+        </h5>
+        <PrimaryUnderLine />
+        <p className="text-gray-700 dark:text-gray-300 mb-8 xl:w-[70%]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien,
           dignissim tristique tellus sed faucibus nullam. Tincidunt mauris ut
           quam sed mauris proin feugiat.
         </p>
-        <button className="px-6 py-3 border border-yellow-500 text-yellow-500 font-semibold hover:bg-yellow-500 hover:text-white transition">
+        <button className="text-primary hover:text-yellow-600 transition text-xs md:text-sm 2xl:text-lg py-2 px-4 border border-primary 2xl:border-2">
           GET IN TOUCH
         </button>
       </div>

@@ -17,7 +17,7 @@ const Header = () => {
 
       <div className="flex items-center space-x-6">
         {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center space-x-6">
+        <ul className="hidden xl:flex items-center space-x-6">
           {Links.map((link) => (
             <NavLink
               to={link.route}
@@ -31,7 +31,6 @@ const Header = () => {
           ))}
         </ul>
 
-        {/* Icons and Mobile Menu Toggle */}
         <div className="flex items-center space-x-4">
           {/* <img
             src={assets.cart_icon}
@@ -53,7 +52,7 @@ const Header = () => {
             />
           )}
           <FaBars
-            className="text-2xl text-gray-800 dark:text-gray-100 cursor-pointer md:hidden"
+            className="text-2xl text-gray-800 dark:text-gray-100 cursor-pointer xl:hidden"
             onClick={() => setIsMenuOpen(true)}
           />
         </div>
