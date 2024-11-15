@@ -1,14 +1,15 @@
 // AboutProject.js
 import React from "react";
 import { assets } from "../assets/assets";
+import PrimaryUnderLine from "./PrimaryUnderLine";
 
 const AboutProject = () => (
-  <div className=" my-12 px-6 md:px-12 lg:px-[14vw] grid grid-cols-1 md:grid-cols-2 items-center gap-6">
+  <div className=" mt-6 md:mt-12 px-[7vw] grid grid-cols-1 md:grid-cols-2 items-center gap-6">
     <div>
-      <h2 className="text-4xl md:text-5xl font-bold dark:text-white mb-8">
+      <h2 className="font-bold text-3xl md:text-4xl 2xl:text-5xl py-3 fade-in mb-4">
         About This Project
       </h2>
-      <div className="w-12 h-1 bg-primary mb-8 d:mb-16"></div>
+      <PrimaryUnderLine />
       <p className="mt-4 text-sm md:text-base 2xl:w-3/4 text-gray-600 dark:text-gray-300">
         Lectus erat, consectetur eu sapien eget rhoncus consectetur sem. Proin
         cursus, dolor a mollis consectetur, risus dolor fermentum massa, a

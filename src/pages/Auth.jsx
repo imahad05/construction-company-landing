@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useApp } from "../context/AppContext";
 
 const Auth = () => {
-  const [isSignUp, setIsSignUp] = useState(true);
+  const [isSignUp, setIsSignUp] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -10,6 +11,7 @@ const Auth = () => {
   });
   const [error, setError] = useState("");
   const navigate = useNavigate();
+  const { setIsAuthenticated } = useApp();
 
   // Toggle between Sign Up and Login
   const toggleForm = () => {
@@ -35,6 +37,10 @@ const Auth = () => {
     // Reset form after successful submit
     setFormData({ name: "", email: "", password: "" });
     setError("");
+
+    localStorage.setItem("isLoggedIn", "true");
+    setIsAuthenticated(true);
+
     alert(isSignUp ? "Sign Up Successful!" : "Login Successful!");
     navigate("/");
   };

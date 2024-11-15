@@ -6,8 +6,10 @@ export const AppProvider = ({ children }) => {
   // Check if a theme is saved in localStorage, otherwise default to 'light'
   const savedTheme = localStorage.getItem("themeMode");
   const [themeMode, setThemeMode] = useState(savedTheme || "light");
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    return localStorage.getItem("isLoggedIn") === "true";
+  });
 
-  // Update the theme class on the document root whenever the themeMode changes
   useEffect(() => {
     if (themeMode === "dark") {
       document.documentElement.classList.add("dark");
@@ -19,7 +21,13 @@ export const AppProvider = ({ children }) => {
     localStorage.setItem("themeMode", themeMode);
   }, [themeMode]);
 
-  const value = { themeMode, setThemeMode };
+  const value = {
+    themeMode,
+    setThemeMode,
+    isAuthenticated,
+    setIsAuthenticated,
+    setIsAuthenticated,
+  };
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
 

@@ -1,14 +1,21 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { assets } from "../../assets/assets";
 import { Links } from "./Links";
 import { FaBars, FaMoon, FaSun, FaTimes, FaUser } from "react-icons/fa";
 import { useApp } from "../../context/AppContext";
+import { BiLogOut } from "react-icons/bi";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { themeMode, setThemeMode } = useApp();
+  const { themeMode, setThemeMode, setIsAuthenticated, isAuthenticated } =
+    useApp();
+  const navigate = useNavigate();
 
+  const handleLogOut = () => {
+    localStorage.removeItem("isLoggedIn");
+    setIsAuthenticated(false);
+  };
   return (
     <nav className="fixed top-0 right-0 left-0 flex justify-between items-center px-6 md:px-[7vw] h-16 bg-gray-100 dark:bg-gray-800 z-50 shadow-xl overflow-x-hidden">
       <h1 className="text-sm md:text-lg xl:text-xl font-semibold text-gray-800 dark:text-gray-100">
@@ -31,38 +38,43 @@ const Header = () => {
           ))}
         </ul>
 
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-2 md:space-x-4">
           {/* <img
             src={assets.cart_icon}
             alt="Cart"
             className="w-5 cursor-pointer hover:scale-105 transition-transform"
           /> */}
           <Link to={"/login"}>
-            <FaUser className="text-2xl text-gray-800 dark:text-gray-100 cursor-pointer" />
+            <FaUser className="text-xl md:text-2xl text-gray-800 dark:text-gray-100 cursor-pointer" />
           </Link>
           {themeMode === "light" ? (
             <FaMoon
-              className="text-2xl text-gray-800 dark:text-gray-100 cursor-pointer"
+              className="text-xl md:text-2xl text-gray-800 dark:text-gray-100 cursor-pointer"
               onClick={() => setThemeMode("dark")}
             />
           ) : (
             <FaSun
-              className="text-2xl text-gray-100 dark:text-gray-100 cursor-pointer"
+              className="text-xl md:text-2xl text-gray-100 dark:text-gray-100 cursor-pointer"
               onClick={() => setThemeMode("light")}
             />
           )}
           {isMenuOpen ? (
             <button
-              className="text-2xl text-gray-800 dark:text-gray-100 cursor-pointer hover:scale-105 transition-transform"
+              className="text-xl md:text-2xl text-gray-800 dark:text-gray-100 cursor-pointer hover:scale-105 transition-transform"
               onClick={() => setIsMenuOpen(false)}
             >
               <FaTimes />
             </button>
           ) : (
             <FaBars
-              className="text-2xl text-gray-800 dark:text-gray-100 cursor-pointer xl:hidden"
+              className="text-xl md:text-2xl text-gray-800 dark:text-gray-100 cursor-pointer xl:hidden"
               onClick={() => setIsMenuOpen(true)}
             />
+          )}
+          {isAuthenticated && (
+            <button onClick={handleLogOut}>
+              <BiLogOut className="text-xl md:text-2xl text-gray-800 dark:text-gray-100 cursor-pointer" />
+            </button>
           )}
         </div>
       </div>

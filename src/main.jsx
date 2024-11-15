@@ -5,9 +5,9 @@ import { BrowserRouter } from "react-router-dom";
 import { AppProvider } from "./context/AppContext";
 
 createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
-    <AppProvider>
+  <AppProvider>
+    <BrowserRouter>
       <App />
-    </AppProvider>
-  </BrowserRouter>
+    </BrowserRouter>
+  </AppProvider>
 );

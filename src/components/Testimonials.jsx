@@ -35,11 +35,11 @@ const TestimonialsSection = () => {
   return (
     <div className="container mx-auto py-12 px-6 md:px-12 lg:px-24">
       {/* Testimonials Header */}
-      <h2 className="text-center text-3xl font-bold mb-4 dark:text-white">
+      <h5 className="font-bold text-3xl md:text-4xl 2xl:text-5xl py-3 fade-in mb-4 text-center">
         Client Testimonials
-      </h2>
+      </h5>
       <div className="flex justify-center mb-8">
-        <PrimaryUnderLine/>
+        <PrimaryUnderLine />
       </div>
 
       {/* Testimonials Grid */}

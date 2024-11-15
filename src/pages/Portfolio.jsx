@@ -5,20 +5,20 @@ const Portfolio = () => {
   return (
     <div className=" bg-white dark:bg-gray-800 text-black dark:text-white mt-16">
       <main
-        className="w-full bg-no-repeat"
+        className="flex flex-col md:flex-row items-center justify-between h-full bg-cover bg-center relative"
         style={{
           background: `url(${assets.portfolio_bg})`,
-          backgroundPosition : "center",
+          backgroundPosition: "center",
           backgroundSize: "cover",
         }}
       >
-        <div className="bg-black bg-opacity-60 h-[60vh] w-full items-start flex flex-col gap-4 justify-center  px-[7vw] md:px-[14vw]">
-          <h5 className="font-bold text-4xl md:text-5xl text-white border-l-4 border-primary py-3 pl-4">
+        <div className="bg-black bg-opacity-60 h-full w-full absolute"></div>
+        <div className=" px-[7vw] py-[10vw] z-10">
+          <h5 className="font-bold text-3xl md:text-4xl 2xl:text-5xl text-white border-l-4 border-primary py-3 pl-4 fade-in mb-4">
             Our Construction <br /> Projects
           </h5>
-          <p className="text-white text-sm md:text-base">
+          <p className="2xl:w-[50%] text-white text-xs md:text-base">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut quis{" "}
-            <br />
             egestas pellentesque libero dolor in diam consequat ut.{" "}
           </p>
         </div>
@@ -32,7 +32,9 @@ const Portfolio = () => {
               <div className="p-4 border dark:border-white border-black mt-4">
                 <h5 className="text-2xl font-semibold my-4">{item.heading}</h5>
                 <p className="text-sm md:text-base">{item.para}</p>
-                <button className="py-2 px-8 border-2 border-black dark:border-white mt-4 text-sm md:text-base hover:text-gray-400 transition">Learn More</button>
+                <button className="text-black dark:text-white hover:text-gray-300 dark:hover:text-gray-300 transition text-xs md:text-sm 2xl:text-lg py-2 px-4 md:px-5 2xl:px-6 border border-black dark:border-white 2xl:border-2 font-normal mt-8">
+                  Learn More
+                </button>
               </div>
             </div>
           ))}
