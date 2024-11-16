@@ -1,6 +1,8 @@
 import React from "react";
 import ContactMain from "../components/ContactMain";
 import MiniBanner from "../components/MiniBanner";
+import ContactUs from "../components/ContactAccordian";
+import ContactMap from "../components/ContactMap";
 
 const Contact = () => {
   return (
@@ -11,7 +13,8 @@ const Contact = () => {
         para={"We Can’t Wait to Make Your Ideas a Reality"}
         buttonText={"ONLINE ESTIMATE FORM"}
       />
-      {/* <GetQuote/> */}
+      <ContactUs/>
+      <ContactMap/>
     </div>
   );
 };

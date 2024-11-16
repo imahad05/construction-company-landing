@@ -60,19 +60,19 @@ const Footer = () => {
             <span>
               <FaLocationPin className="text-xl text-gray-500" />
             </span>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Ittehad Town Karachi, Karachi City, Sindh 74200, Pakistan</p>
           </div>
           <div className="flex gap-4 items-center">
             <span>
               <FaPhone className="text-xl text-gray-500" />
             </span>
-            <p>+00 123 456 78</p>
+            <p>+92 309-2509757</p>
           </div>
           <div className="flex gap-4 items-center">
             <span>
               <MdEmail className="text-xl text-gray-500" />
             </span>
-            <p>constractioninc@gmail.com</p>
+            <p>ahad3192059@gmail.com</p>
           </div>
         </div>
       </div>
