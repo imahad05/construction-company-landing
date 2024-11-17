@@ -31,6 +31,7 @@ import pf9 from "./pf9.png";
 import ab1 from "./ab1.png";
 import ab2 from "./ab2.png";
 import ab3 from "./ab3.png";
+import arrow from "./arrow_right.png";
 
 export const assets = {
   main_bg,
@@ -248,5 +249,26 @@ export const portfolio = [
     img: pf9,
     heading: "Service Title",
     para: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Id et euismod bibendum adipiscing et orci, fermentum. ",
+  },
+];
+
+export const onlyTheBest = [
+  {
+    id: 1,
+    img: arrow,
+    heading: "Eco Friendly Construction",
+    para: "Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. ",
+  },
+  {
+    id: 2,
+    img: arrow,
+    heading: "The Newest Technology Repairs",
+    para: "Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. ",
+  },
+  {
+    id: 3,
+    img: arrow,
+    heading: "High Quality Construction Management",
+    para: "Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. ",
   },
 ];
